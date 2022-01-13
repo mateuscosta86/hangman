@@ -15,9 +15,7 @@ defmodule Core.Impl.Game do
 
   @spec new_game :: t()
   def new_game do
-    %__MODULE__{
-      letters: Dictionary.random_word() |> String.codepoints()
-    }
+    Dictionary.random_word() |> new_game()
   end
 
   @spec new_game(String.t()) :: t()
