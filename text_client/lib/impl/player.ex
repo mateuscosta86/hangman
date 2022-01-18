@@ -1,12 +1,9 @@
 defmodule TextClient.Impl.Player do
-  alias Core.Impl.Game
-
   @typep game :: Core.Impl.Game.t()
   @typep tally :: Type.tally()
   @typep state :: {game, tally}
 
-  def start() do
-    game = Core.new_game()
+  def start(game) do
     tally = Core.tally(game)
 
     interact({game, tally})
