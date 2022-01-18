@@ -3,7 +3,7 @@ defmodule Core do
 
   @spec new_game :: Server.t()
   def new_game do
-    {:ok, pid} = Server.start_link()
+    {:ok, pid} = Core.Runtime.Application.start_game()
     pid
   end
 

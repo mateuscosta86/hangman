@@ -14,6 +14,7 @@ defmodule Core.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
+      mod: {Core.Runtime.Application, []},
       extra_applications: [:logger]
     ]
   end
@@ -22,7 +23,7 @@ defmodule Core.MixProject do
   defp deps do
     [
       {:dictionary, path: "../dictionary"},
-      {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
+      {:dialyxir, "~> 1.0", only: [:dev], runtime: false}
     ]
   end
 end

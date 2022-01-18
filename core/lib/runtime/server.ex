@@ -4,8 +4,8 @@ defmodule Core.Runtime.Server do
 
   @type t :: pid()
 
-  @spec start_link :: :ignore | {:error, any} | {:ok, pid}
-  def start_link() do
+  @spec start_link(any()) :: :ignore | {:error, any} | {:ok, pid}
+  def start_link(_) do
     GenServer.start_link(__MODULE__, nil)
   end
 
